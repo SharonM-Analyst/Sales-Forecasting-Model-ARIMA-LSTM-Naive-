@@ -1,6 +1,6 @@
 # Sales Forecasting — LSTM (2017)
 ## Time Series: NEURAL NETWORK(LSTM), ARIMA, SARIMAX, NAIVE BASELINE
-## Structure
+## Structure Model Building
 
 ```
 input/
