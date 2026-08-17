@@ -1,5 +1,15 @@
 # Sales Forecasting — LSTM (2017)
 ## Time Series: NEURAL NETWORK(LSTM), ARIMA, SARIMAX, NAIVE BASELINE
+
+<!-- MLOps Workflow -->
+<p align="center">
+  <a href="mlops_workflow.html">
+    <img src="https://img.shields.io/badge/MLOps%20Workflow-Revenue/Sales Forecasting-blue?style=for-the-badge" />
+  </a>
+</p>
+
+![ML Workflow](https://github.com/SharonM-Analyst/Sales-Forecasting-Model-ARIMA-LSTM-Naive-/blob/54c9552c1b737253950a46eb6b02c7c1df7eab24/2.%20Project%20Planning/Flow_Diagram.png)
+
 ## Structure Model Building
 
 ```
