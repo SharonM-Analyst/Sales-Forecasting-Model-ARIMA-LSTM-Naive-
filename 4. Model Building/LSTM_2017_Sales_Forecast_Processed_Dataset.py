@@ -284,6 +284,15 @@ print(test_df["Date"].min(), "to", test_df["Date"].max())
 
 # COMMAND ----------
 
+# Save the Splitted dataset to CSV
+train_df.to_csv("/Workspace/Repos/sshanay92@gmail.com/Sales-Forecasting-Model-ARIMA-LSTM-Naive-/4. Model Building/4.1 Input/train.csv", index=False)
+
+val_df.to_csv("/Workspace/Repos/sshanay92@gmail.com/Sales-Forecasting-Model-ARIMA-LSTM-Naive-/4. Model Building/4.1 Input/val.csv", index=False)
+
+test_df.to_csv("/Workspace/Repos/sshanay92@gmail.com/Sales-Forecasting-Model-ARIMA-LSTM-Naive-/4. Model Building/4.1 Input/test.csv", index=False)
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC ### Time-series rule
 # MAGIC
@@ -569,6 +578,14 @@ test_actual, test_pred, test_mae, test_rmse, test_r2 = evaluate_model(
 
 # MAGIC %md
 # MAGIC # 14. NAIVE BASELINES
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC - Sets a score to beat.
+# MAGIC - Proves if a complex system adds real value.
+# MAGIC - Catches basic errors in data setup.
+# MAGIC - Offers a fast sanity check.
 
 # COMMAND ----------
 
@@ -1204,3 +1221,21 @@ final_model.save(
 )
 
 print("Saved model: Sales_LSTM_2017.keras")
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC # Saving Models
+
+# COMMAND ----------
+
+model_save_path = "/Workspace/Repos/sshanay92@gmail.com/Sales-Forecasting-Model-ARIMA-LSTM-Naive-/4. Model Building/4.3 models"
+
+final_model.save(f"{model_save_path}/Sales_LSTM_2017.keras")
+
+import joblib
+joblib.dump(arima_model, f"{model_save_path}/Sales_ARIMA_2017.pkl")
+joblib.dump(sarimax_model, f"{model_save_path}/Sales_SARIMAX_2017.pkl")
+
+print("Saved all models to:")
+print(model_save_path)
